@@ -3,10 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Open Board Clone</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
+    <div class="options-cont">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="tools-cont scale-tools">
+      <img class="pencil" src="Icons/Pencil.svg" />
+      <img class="earser" src="Icons/Earser.svg" />
+      <img class="download" src="Icons/Download.svg" />
+      <img class="upload" src="Icons/Upload.svg" />
+      <img class="sticky" src="Icons/StickyNote.svg" />
+      <img class="redo" src="Icons/Redo.svg" />
+      <img class="undo" src="Icons/Undo.svg" />
+    </div>
+
+    <div class="pencil-tool-cont">
+      <div class="pencil-width-cont">
+        <input type="range" min="2" max="10" value="3" class="pencil-width" />
+      </div>
+      <div class="pencil-color-cont">
+        <div class="black pencil-color"></div>
+        <div class="red pencil-color"></div>
+        <div class="blue pencil-color"></div>
+      </div>
+    </div>
+    <div class="earser-tool-cont">
+      <div class="earser-width-cont">
+        <input type="range" min="2" max="10" value="3" class="earser-width" />
+      </div>
+    </div>
+
+    <canvas></canvas>
     <script src="tools.js"></script>
+    <script src="canvas.js"></script>
   </body>
 </html>
