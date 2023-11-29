@@ -9,4 +9,4 @@ How to establish the backend(server) connection & start the server
 5. Connect the socket in frontend with cdn, you will get the response in backend and now make the connection
 6. Now connect the index.html file with server to render the page.
 
-Server to connect locally -> <a href="http://localhost.5000">localhost</a>
+Server to connect locally -> <a href="http://localhost.5000">http://localhost.5000</a>
