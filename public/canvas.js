@@ -28,16 +28,28 @@ tool.lineWidth = penWidth;
 // mousedown -> start new path, mousemove -> path fill (graphics)
 canvas.addEventListener("mousedown", (e) => {
     mouseDown = true;
-    beginPath({ x: e.clientX, y: e.clientY });
+    // beginPath({ x: e.clientX, y: e.clientY });
+
+    let data = {
+        x: e.clientX, y: e.clientY
+    }
+    socket.emit("beginPath", data);  // to send data to server(BE)
 });
 
 canvas.addEventListener("mousemove", (e) => {
     if (mouseDown) {
-        drawStroke({
+        // drawStroke({
+        //     x: e.clientX, y: e.clientY,
+        //     color: earserFlag ? earserColor : penColor,
+        //     width: earserFlag ? earserWidth : penWidth
+        // });
+
+        let data = {
             x: e.clientX, y: e.clientY,
             color: earserFlag ? earserColor : penColor,
             width: earserFlag ? earserWidth : penWidth
-        });
+        }
+        socket.emit("drawStroke", data);
     }
 });
 
@@ -54,11 +66,12 @@ undo.addEventListener("click", (e) => {
         track--;
     }
     //action
-    let trackObj = {
+    let data = {
         trackValue: track,
         undoRedoTracker
     }
-    undoRedoCanvas(trackObj);
+    socket.emit("redoUndo", data);
+    // undoRedoCanvas(trackObj);
 });
 
 redo.addEventListener("click", (e) => {
@@ -66,11 +79,12 @@ redo.addEventListener("click", (e) => {
         track++;
     }
     //action
-    let trackObj = {
+    let data = {
         trackValue: track,
         undoRedoTracker
     }
-    undoRedoCanvas(trackObj);
+    socket.emit("redoUndo", data);
+    // undoRedoCanvas(trackObj);
 });
 
 function undoRedoCanvas(trackObj) {
@@ -136,4 +150,17 @@ download.addEventListener("click", (e) => {
     a.href = url;
     a.download = "board.jpg"
     a.click();
+});
+
+// Listen the transfred data from server(BE) in FE & show the data
+socket.on("beginPath", (data) => {
+    beginPath(data);
+});
+
+socket.on("drawStroke", (data) => {
+    drawStroke(data);
+});
+
+socket.on("redoUndo", (data) => {
+    undoRedoCanvas(data);
 });

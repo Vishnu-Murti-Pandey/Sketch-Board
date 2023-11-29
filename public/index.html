@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Open Board Clone</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>OpenBoard Clone</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -12,6 +11,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="options-cont">
@@ -44,6 +44,16 @@
     </div>
 
     <canvas></canvas>
+    <script
+      src="https://cdn.socket.io/4.7.2/socket.io.min.js"
+      integrity="sha384-mZLF4UVrpi/QTWPA7BjNPEnkIfRFn4ZEO3Qt/HFklTJBj/gBOV8G3HcKn4NfQblz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      let socket = io.connect("http://localhost:5000");
+    </script>
+
     <script src="tools.js"></script>
     <script src="canvas.js"></script>
   </body>
