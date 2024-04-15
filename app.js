@@ -10,7 +10,14 @@ let server = app.listen(port, () => {   // establish a port
     console.log("Listining to port " + port);
 });
 
-let io = socket(server); // Connection
+// let io = socket(server); // Connection
+
+const io = require('socket.io')(server, {
+    pingTimeout: 60000,
+    cors: {
+        origin: 'http://localhost:5000'
+    }
+});
 
 io.on("connection", (socket) => {   // on()-> it is same as addEventListner -> when connecttion established it triggers
     console.log("Made socket connection");
