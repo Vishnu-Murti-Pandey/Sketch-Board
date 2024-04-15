@@ -5,7 +5,7 @@ const app = express();   // Initalized and server ready
 
 app.use(express.static("public"));   // to connect index.html to render page
 
-let port = 5000;
+let port = process.env.PORT || 5000;
 let server = app.listen(port, () => {   // establish a port
     console.log("Listining to port " + port);
 });
