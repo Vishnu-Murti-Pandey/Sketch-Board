@@ -2,23 +2,25 @@
 
 #### The Sketch Board web application is a collaborative digital whiteboard platform designed to brainstorm, share ideas, and work on visual projects in real time. It provides a virtual canvas where users can draw and erase, add sticky notes, and download whatever they draw fostering creativity and collaboration among team members, whether they're in the same room or across the globe.
 
-# Tech Stack - 
+# Tech Stack -
 
 #### Client - HTML, CSS, Javascript
+
 #### Server - ExpressJS
+
 #### Real-Time Communication: Socket.io
 
-## Demo 
+## Demo
+
 https://sketch-board-uuyh.onrender.com/
 
-<img src="screenshots/board.png" title="board">
-
+<img src="screenshots/board.gif" title="board">
 
 # Features
 
 #### A variety of drawing tools are available, including pens, an eraser, an undo option, a redo option, a download option, an upload file option, and sticky notes option, enabling users to express their ideas visually.
 
-# Installation 
+# Installation
 
 #### How to establish the backend(server) connection & start the server
 
