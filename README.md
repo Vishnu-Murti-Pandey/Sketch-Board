@@ -8,7 +8,7 @@
 
 #### Server - ExpressJS
 
-#### Real-Time Communication: Socket.io
+#### Real-Time Communication - Socket.io
 
 ## Demo
 
@@ -20,9 +20,10 @@ https://sketch-board-uuyh.onrender.com/
 
 #### A variety of drawing tools are available, including pens, an eraser, an undo option, a redo option, a download option, an upload file option, and sticky notes option, enabling users to express their ideas visually.
 
-<img src="screenshots/board.gif" title="board" width="100%">
+https://github.com/Vishnu-Murti-Pandey/Sketch-Board/assets/53193912/e36d2def-fa54-4369-8ee0-2bb530dc8bf2
 
 # Installation
+
 
 #### How to establish the backend(server) connection & start the server
 
