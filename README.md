@@ -1,6 +1,17 @@
 # Sketch-Board
 
-How to establish the backend(server) connection & start the server
+#### The Sketch Board web application is a collaborative digital whiteboard platform designed to brainstorm, share ideas, and work on visual projects in real time. It provides a virtual canvas where users can draw and erase, add sticky notes, and download whatever they draw fostering creativity and collaboration among team members, whether they're in the same room or across the globe.
+
+<img src="screenshots/board.png" title="board">
+
+
+# Features
+
+#### A variety of drawing tools are available, including pens, an eraser, an undo option, a redo option, a download option, an upload file option, and sticky notes option, enabling users to express their ideas visually.
+
+# Installation 
+
+#### How to establish the backend(server) connection & start the server
 
 1. npm init -> to install package.json
 2. Install express & scoket.io
@@ -10,5 +21,3 @@ How to establish the backend(server) connection & start the server
 6. Now connect the index.html file with server to render the page.
 
 Server to connect locally -> <a href="http://localhost.5000">http://localhost.5000</a>
-
-<div style="position: relative; padding-bottom: 53.125%; height: 0;"><iframe src="https://www.loom.com/embed/7c4add70dcd940c0af8c2864b42331f2?sid=2bf38bac-441f-4432-bfd3-1e6a3c89d225" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
